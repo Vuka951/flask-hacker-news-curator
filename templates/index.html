@@ -15,6 +15,11 @@
     <h1 style="margin-top: 30vh;">Hacker News Curator</h1>
     <p>Browse Hacker News in a Cleaner Fashon</p>
     <form method="POST" action="hacker_news" id="hacker_news">
+        <div class="form-label">
+            Night mode <div class="night-mode-button">
+                <div class="inner-circle"></div>
+            </div>
+        </div>
         <label class="form-label">
             Number of pages to check:
             <select id="num_pages" name="num_pages" form="hacker_news" required>
@@ -29,6 +34,7 @@
         </label>
         <button type="submit">Submit</button>
     </form>
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
 </body>
 
 </html>

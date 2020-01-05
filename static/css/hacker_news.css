@@ -26,35 +26,6 @@ a:visited {
     cursor: pointer;
 }
 
-/* Night mode button */
-
-.night-mode-button {
-    background: gray;
-    width: 40px;
-    height: 20px;
-    border-radius: 20px;
-    padding: 5px;
-    cursor: pointer;
-    transition: all 300ms ease-in-out;
-    display: inline-block;
-}
-  
-.night-mode-button > .inner-circle {
-    background: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    transition: all 300ms ease-in-out;
-}
-
-.night-mode-button.active {
-    background: rgb(220, 0, 78);
-}
-
-.night-mode-button.active > .inner-circle {
-    margin-left: 20px;
-}
-
 /* Table Styles */
 
 .table-wrapper {

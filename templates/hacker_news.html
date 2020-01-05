@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hacker_news.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/utils.css') }}">
+    <title>Hacker News Curator</title>
+</head>
+
+<body>
+    <h1 style="text-align: center">Hacker News Curator</h1>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th class='table-title' colspan="2">
+                        <div>
+                            <button class="w3-button w3-large w3-black">‹</button>
+                            <span>
+                                {{ posts|length }} posts from the first {{ num_of_pages }} pages with a min of
+                                {{ min_upvotes }} upvotes
+                            </span>
+                            <div class="night-mode-button">
+                                <div class="inner-circle"></div>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="table-header-colums">Title</th>
+                    <th class="table-header-colums">Upvotes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in posts %}
+                <tr>
+                    <td>
+                        <a href="{{ item.link }}" target="_blank">{{ item.title }} </a>
+                    </td>
+                    <td>
+                        {{ item.upvotes }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="{{ url_for('static', filename='js/hacker_news.js') }}"></script>
+</body>
+
+</html>

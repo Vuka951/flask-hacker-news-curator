@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+</head>
+
+<body>
+    <form method="POST" action="hacker_news" id="hacker_news">
+        <label>
+            Number of pages to scrape:
+            <select id="num_pages" name="num_pages" form="hacker_news" required>
+                {% for i in range(20) %}
+                <option>{{ i + 1 }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <label>
+            Minimum number of upvotes:
+            <input type="number" name="min_upvotes" min="1" value="1">
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

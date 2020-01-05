@@ -5,22 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/utils.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>Hacker News Curator</title>
 </head>
 
-<body>
+<body class="text-align-center">
+    <h1 style="margin-top: 30vh;">Hacker News Curator</h1>
+    <p>Browse Hacker News in a Cleaner Fashon</p>
     <form method="POST" action="hacker_news" id="hacker_news">
-        <label>
-            Number of pages to scrape:
+        <label class="form-label">
+            Number of pages to check:
             <select id="num_pages" name="num_pages" form="hacker_news" required>
                 {% for i in range(20) %}
                 <option>{{ i + 1 }}</option>
                 {% endfor %}
             </select>
         </label>
-        <label>
+        <label class="form-label">
             Minimum number of upvotes:
-            <input type="number" name="min_upvotes" min="1" value="1">
+            <input type="number" name="min_upvotes" min="1" max="1000" value="1">
         </label>
         <button type="submit">Submit</button>
     </form>

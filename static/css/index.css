@@ -1,0 +1,14 @@
+.text-align-center {
+    text-align: center
+}
+
+form {
+    margin: auto;
+    max-width: 330px;
+}
+
+.form-label {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/hacker_news.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/utils.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hacker_news.css') }}">
     <title>Hacker News Curator</title>
 </head>
 
@@ -17,9 +17,9 @@
         <table>
             <thead>
                 <tr>
-                    <th class='table-title' colspan="2">
-                        <div>
-                            <button class="w3-button w3-large w3-black">‹</button>
+                    <th class="table-title" colspan="2">
+                        <div class="table-header">
+                            <button class="back-button" onclick="window.history.back()">&laquo; Back</button>
                             <span>
                                 {{ posts|length }} posts from the first {{ num_of_pages }} pages with a min of
                                 {{ min_upvotes }} upvotes

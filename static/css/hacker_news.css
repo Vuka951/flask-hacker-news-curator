@@ -1,5 +1,13 @@
-body {
-    color: rgba(0, 0, 0, 0.87);
+@font-face {
+    font-family: 'aileronlight';
+    src: url('fonts/Aileron-Light-webfont.eot');
+    src: url('fonts/Aileron-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Aileron-Light-webfont.woff2') format('woff2'),
+         url('fonts/Aileron-Light-webfont.woff') format('woff'),
+         url('fonts/Aileron-Light-webfont.ttf') format('truetype'),
+         url('fonts/Aileron-Light-webfont.svg#aileronlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 a {
@@ -8,6 +16,14 @@ a {
 
 a:visited {
     color: #a7a7a7;
+}
+
+.back-button {
+    background: #c3c3c3;
+    color: black;
+    border: 0;
+    border-radius: 40px;
+    cursor: pointer;
 }
 
 /* Night mode button */
@@ -58,8 +74,12 @@ table {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
 }
 
+.table-header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .table-title {
-    text-align: center;
     font-size: 1.5em;
     position: -webkit-sticky;
     position: sticky;

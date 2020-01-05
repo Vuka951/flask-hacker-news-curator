@@ -84,6 +84,9 @@ th {
     .table-header-colums {
       top: 75px;
     }
+    .table-header {
+        display: block;
+    }
   }
 
 @media only screen and (max-width: 330px) {
